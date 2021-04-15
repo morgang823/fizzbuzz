@@ -99,18 +99,48 @@
                     <a href="#" data-scroll-nav="1" class="scroll-down-btn">Scroll Down</a>
                 </div>
                 <div class="container">
-                    <h1>Enter in two numbers to get a range</h1>
+                    <div class="row">
+                        <h4>Fizz Buzz Coding Challenge</h4>
+                    </div>
                     <hr>
-                    <form action="">
-                        <div class="form-row">
-                            <div class="col-auto">
-                                <label>Enter A number</label>
-                                <input type="number" id="numOne" value="1">
+                    <div class="row">
+                        <h5>Enter a start and end to print the range. BONUS: Choose a 'FIZZ' and a 'BUZZ'</h5>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <h5>
+                            Fizz and Buzz will
+                            highlight and display based on the multiples you give them.
+                        </h5>
+                    </div>
+                    <hr>
+                    <form action="" class="formInput">
+                        <!-- <div class="container"> -->
+                        <div class="row">
+                            <!-- Start and End Numbers -->
+                            <div class="col">
+                                <label for="numOne">Enter start number</label>
+                                <input class="form-control" type="number" name="numOne" id="numOne" value=1>
                             </div>
-                            <div class="col-auto">
-                                <label>Enter A number</label>
-                                <input type="number" id="numTwo" value="100">
+                            <div class="col">
+                                <label for="numTwo">Enter end number</label>
+                                <input class="form-control" type="number" name="numTwo" id="numTwo" value=100>
                             </div>
+                        </div>
+                        <div class="row">
+                            <!-- Fizz and Buzz Numbers -->
+                            <div class="col">
+                                <label for="numFizz">Enter 'Fizz' number</label>
+                                <input class="form-control" type="number" name="numFizz" id="numFizz" value=3>
+                            </div>
+                            <div class="col">
+                                <label for="numBuzz">Enter 'Buzz' number</label>
+                                <input class="form-control" type="number" name="numBuzz" id="numBuzz" value=5>
+                            </div>
+                        </div>
+                        <!-- </div> -->
+
+                        <div class="row">
                             <div class="col text-right">
                                 <button id="submitBtn" type="button" class="btn btn-danger">Submit</button>
                             </div>
@@ -363,51 +393,51 @@
         </footer>
         <!--// Footer End //-->
     </div>
-        <!--// Page Wrapper End //-->
-        <!--// JQuery //-->
-        <script src="js/jquery.min.js"></script>
-        <!--// Popper //-->
-        <script src="js/popper.min.js"></script>
-        <!--// Bootstrap //-->
-        <script src="js/bootstrap.min.js"></script>
-        <!--// Images Loaded Js //-->
-        <script src="js/images.loaded.min.js"></script>
-        <!--// Wow Js //-->
-        <script src="js/wow.min.js"></script>
-        <!--// Magnific Popup //-->
-        <script src="js/magnific.popup.min.js"></script>
-        <!--// Waypoint Js //-->
-        <script src="js/waypoint.min.js"></script>
-        <!--// Counter Up Js //-->
-        <script src="js/counter.up.min.js"></script>
-        <!--// JQuery Easing Functions //-->
-        <script src="js/jquery.easing.min.js"></script>
-        <!--// Owl Carousel //-->
-        <script src="js/owl.carousel.min.js"></script>
-        <!--// Form Validate //-->
-        <script src="js/validate.min.js"></script>
-        <!--// Form Validate //-->
-        <script src="js/custom.select.plugin.js"></script>
-        <!--// Scroll It //-->
-        <script src="js/scrollit.min.js"></script>
-        <!--// Isotope Js //-->
-        <script src="js/isotope.min.js"></script>
-        <!--// Particles Js //-->
-        <script src="js/particles.js"></script>
-        <!--// Main Js //-->
-        <script src="js/main.js"></script>
-        <!-- Email JS Initializer -->
-        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-        <script type="text/javascript">
-            emailjs.init('user_ggShFQ1um7eCX9RTTK0Wl')
-        </script>
-        <!-- SweetAlert JS -->
-        <script src="//unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-        <!-- //Email Js -->
-        <script src="js/site.js"></script>
-         <script src="/js/array.js"></script>
-         <script>
-             document.getElementById("submitBtn").addEventListener("click", printNumbers)
-         </script>
+    <!--// Page Wrapper End //-->
+    <!--// JQuery //-->
+    <script src="js/jquery.min.js"></script>
+    <!--// Popper //-->
+    <script src="js/popper.min.js"></script>
+    <!--// Bootstrap //-->
+    <script src="js/bootstrap.min.js"></script>
+    <!--// Images Loaded Js //-->
+    <script src="js/images.loaded.min.js"></script>
+    <!--// Wow Js //-->
+    <script src="js/wow.min.js"></script>
+    <!--// Magnific Popup //-->
+    <script src="js/magnific.popup.min.js"></script>
+    <!--// Waypoint Js //-->
+    <script src="js/waypoint.min.js"></script>
+    <!--// Counter Up Js //-->
+    <script src="js/counter.up.min.js"></script>
+    <!--// JQuery Easing Functions //-->
+    <script src="js/jquery.easing.min.js"></script>
+    <!--// Owl Carousel //-->
+    <script src="js/owl.carousel.min.js"></script>
+    <!--// Form Validate //-->
+    <script src="js/validate.min.js"></script>
+    <!--// Form Validate //-->
+    <script src="js/custom.select.plugin.js"></script>
+    <!--// Scroll It //-->
+    <script src="js/scrollit.min.js"></script>
+    <!--// Isotope Js //-->
+    <script src="js/isotope.min.js"></script>
+    <!--// Particles Js //-->
+    <script src="js/particles.js"></script>
+    <!--// Main Js //-->
+    <script src="js/main.js"></script>
+    <!-- Email JS Initializer -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        emailjs.init('user_ggShFQ1um7eCX9RTTK0Wl')
+    </script>
+    <!-- SweetAlert JS -->
+    <script src="//unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- //Email Js -->
+    <script src="js/site.js"></script>
+    <script src="/js/array.js"></script>
+    <script>
+        document.getElementById("submitBtn").addEventListener("click", printNumbers)
+    </script>
 </body>
 </main>
