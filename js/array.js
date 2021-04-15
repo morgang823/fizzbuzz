@@ -16,7 +16,6 @@ function getRange(start, end) {
 
     }
     return numberArray;
-
 }
 
 //Display Data Function

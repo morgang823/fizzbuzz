@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="css/style.css">
     <!--// Theme Color Css //-->
     <link rel="stylesheet" href="css/skins/red-color.css" id="theme-color-toggle" />
-    <link rel="stylesheet" href="css/prism.css">
+    <link rel="stylesheet" href="css/prism_default.css">
 </head>
 <!--// Header Start //-->
 
@@ -164,7 +164,7 @@
                                 <div class="body">
                                     <h4>01</h4>
                                     <h5>Create For Loops with If/Else Statements</h5>
-                                    <a href="img/testcode.PNG" data-target="#code4Modal" data-toggle="modal">View<i
+                                    <a href="img/testcode.PNG" data-target="#code5Modal" data-toggle="modal">View<i
                                             class="fa fa-arrow-right"></i></a>
                                 </div>
                                 <div class="icon">
@@ -466,7 +466,14 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col">
-                                    <pre class="line-numbers"><code class="lang"></code>
+                                    <pre class="line-numbers"><code class="language-javascript">//Function to Print the user's inputs
+function printNumbers() {
+let start = parseInt(document.getElementById("numOne").value);
+let end = parseInt(document.getElementById("numTwo").value);
+let numbers = getRange(start, end);
+displayData(numbers);
+}
+                                    </code>
                                         </pre>
                                 </div>
                             </div>
@@ -511,11 +518,8 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col">
-                                    <pre class="line-numbers"><code class="language-javascript">//<!-- Site JS -->
-    <script src="js/site.js"></script>
-    <script>
-        document.getElementById("submitBtn").addEventListener("click", reverseString)
-    </script>
+                                    <pre class="line-numbers"><code class="language-javascript">//Create a event using the button and an element In the HTML between a script tag, in the body tag.
+document.getElementById("submitBtn").addEventListener("click", printNumbers)
 </body>
 
     }</code></pre>
@@ -553,7 +557,7 @@
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title" id="exampleModalLongTitle">Reverse String (function)</h4>
+                        <h4 class="modal-title" id="exampleModalLongTitle">Create a Get Range Function</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -562,19 +566,19 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col">
-                                    <pre class="line-numbers"><code class="language-javascript">function reverseString() {
-    //Get User's word
-    let userWord = document.getElementById("tacoCat").value;
-    let cleanedWord = userWord.replace(/\W+/gm, "");
-    cleanedWord = cleanedWord.toLowerCase();
-    let start = cleanedWord.length - 1;
-    let reverseWord = "";
-    for (let i = start; i >= 0; i--) {
-        reverseWord = reverseWord += cleanedWord[i];
+                                    <pre class="line-numbers"><code class="language-javascript">//Business type functionality, get the range of numbers
+function getRange(start, end) {
+    let numberArray = [];
+    // Values[0,1,2,3,4,5,6,7,8,9]
+    //indexes [0,1,2,3,4,5,6,7,8]
+    //length = 10
+    //numberArray[0] == 1
+    for (let index = start; index <= end; index++) {
+        numberArray.push(index);
 
     }
-    let output = document.getElementById("tacoResults");
-    output.innerText = reverseWord;
+    return numberArray;
+}
 }</code></pre>
                                 </div>
                             </div>
@@ -589,6 +593,7 @@
             </div>
         </div>
         <!-- End Code 3 Popup Modal -->
+
         <!-- Code 4 Popup Modal -->
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
@@ -609,7 +614,7 @@
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title" id="exampleModalLongTitle">Palindrome Validation</h4>
+                        <h4 class="modal-title" id="exampleModalLongTitle">Display Data Function and Number Range</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -618,13 +623,14 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col">
-                                    <pre class="line-numbers"><code class="language-javascript">//Palendrome Validation
-    let trueFalseOutput = document.getElementById("palindrome");
-    if (cleanedWord === reverseWord) {
-        trueFalseOutput.innerText = "This is a palindrome";
-    } else {
-        trueFalseOutput.innerText = "This is not a palindrome";
-    }</code></pre>
+                                    <pre class="line-numbers"><code class="language-javascript">//function displayData(numbers) {
+    const rowTemplate = document.getElementById("Data-Template");
+    const resultsBody = document.getElementById("resultsBody");
+    let colCount = rowTemplate.content.cloneNode(true).querySelectorAll("td").length;
+
+    //clear the table 
+    resultsBody.innerHTML = "";
+</code></pre>
                                 </div>
                             </div>
                         </div>
@@ -638,4 +644,85 @@
             </div>
         </div>
         <!-- End Code 4 Popup Modal -->
+
+
+        <!-- -->
+        <!-- Code 5 Popup Modal -->
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+                <img src="" class="img-fluid" alt="">
+                <div class="portfolio-links">
+                    <a href="javascript:void();" data-target="#code5Modal" data-toggle="modal" title="App 1"><i
+                            class="bx bx-plus"></i></a>
+                    <a href="#" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- This is the code that makes the modal itself -->
+        <!-- The first div declares the modal -->
+        <!-- The second div defines the modal - vertically centered and large size -->
+        <!-- Code4 Modal Section -->
+        <div class="modal fade" id="code5Modal" tabindex="-1" role="dialog" aria-labelledby="code4Modal"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="exampleModalLongTitle">Creating for loop with if and else statements
+                        </h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <pre class="line-numbers"><code class="language-javascript">// loop over every element in the numbers array
+    // get the value and write it to the page
+    for (let i = 0; i < numbers.length; i += colCount) {
+        let dataRow = rowTemplate.content.cloneNode(true);
+        let cols = dataRow.querySelectorAll("td");
+
+        for (let colIndex = 0; colIndex < cols.length; colIndex++) {
+            let value = numbers[i + colIndex]
+            if (typeof value === "undefined") {
+                value = "";
+            } else if (value % 3 == 0 && value % 15 != 0) {
+                cols[colIndex].classList.add("fizz")
+                value = "Fizz";
+            }
+            if (typeof value === "undefined") {
+                value = "";
+            } else if (value % 5 == 0 && value % 15 != 0) {
+                cols[colIndex].classList.add("buzz")
+                value = "Buzz";
+            }
+
+            if (typeof value === "undefined") {
+                value = "";
+            } else if (value % 15 == 0) {
+                cols[colIndex].classList.add("fizzBuzz")
+                value = "FizzBuzz";
+            }
+            // tds use textContent to set content
+            cols[colIndex].textContent = value;
+        }
+
+        // add the row to the page
+        resultsBody.appendChild(dataRow);
+    }</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <!-- <a href="" class="btn btn-primary" target="_blank">Visit
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Code 5 Popup Modal -->
+
 </body>
